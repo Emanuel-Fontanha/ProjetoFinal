@@ -1,20 +1,20 @@
 # Divisão de Tarefas
 
 ## Páginas do Frontend
-[ ] Login: PV
-[ ] Carrinho: PV
-[ ] Cadastro: Emanuel
-[ ] Pijamas: Emanuel
-[ ] Favoritos: PK
-[ ] Home: PK
-[ ] Feedback: Hudson
-[ ] Pijama:Hudosn
+1. [ ] Login: PV
+2. [ ] Carrinho: PV
+3. [ ] Cadastro: Emanuel
+4. [ ] Pijamas: Emanuel
+5. [ ] Favoritos: PK
+6. [ ] Home: PK
+7. [ ] Feedback: Hudson
+8. [ ] Pijama: Hudosn
 
 ## Backend
 1. [X] Fazer config do back (ambientação)
 2. [ ] CRUD (endpoints de user e feedback)
 3. [ ] Modelagem inicial (p1: pijamas, p2: checkout)
-4. [ ] Finalização
+4. [ ] Finalização e polimentos
 
 # Convetional commits (CCs): a padronização dos commits
 
