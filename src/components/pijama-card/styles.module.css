@@ -36,7 +36,7 @@
 }
 
 .check:checked + label .coracao {
-  fill: #b82935;
+  fill: var(--vermelho300);
 }
 
 .discountIcon{
@@ -58,7 +58,7 @@
   line-height: 100%;
   letter-spacing: 5%;
   text-transform: uppercase;
-  color: #3e677a;
+  color: var(--azul300);
 }
 
 .price {
@@ -70,7 +70,7 @@
 
 .disconto {
   height: 1.25rem;
-  color: #b82935;
+  color: var(--vermelho200);
   text-decoration: line-through;
   font-family: Nunito Sans;
   font-weight: 400;
@@ -88,7 +88,7 @@
   font-size: 40px;
   line-height: 100%;
   letter-spacing: 0%;
-  color: #274553;
+  color: var(--azul400);
 }
 
 .parcelado {
