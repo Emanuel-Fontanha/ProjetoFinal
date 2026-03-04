@@ -1,0 +1,53 @@
+.header{
+    width: 100%px;
+    height: 178px;
+    background-color: #74010B; /*vermelho400*/
+    display: flex;
+    border-bottom: 1px solid;
+    box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.3);
+}
+
+.img1{
+    margin-left: 70px;
+}
+
+.divLista{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 180px;
+}
+
+.lista{
+    text-decoration: none;
+    list-style: none;
+    color: #FCF7F8; /*branco*/
+    font-weight: 600;
+    font-size: 25px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.containerIcons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    margin-left: 180px;
+}
+
+.img2{
+    margin-right: 5px;
+}
+
+.divIcons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.divUser{
+    margin-left: 20px;
+}
