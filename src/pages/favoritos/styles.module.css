@@ -1,0 +1,44 @@
+.container{
+    background-color: var(--branco);
+    display: flex;
+    align-items: flex-end;
+    padding: 3rem;
+    gap: 1rem;
+}
+
+.carrinho{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem
+}
+
+.carrinho h1{
+    font-family: Numans;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 40px;
+    line-height: 100%;
+    letter-spacing: 4%;
+    color: var(--cinza200)
+}
+
+.favoritos{
+    display: flex;
+    align-items: flex-end;
+    gap: 0.5rem
+}
+
+.favoritos svg{
+    width: 63px;
+    height: 63px;
+}
+
+.favoritos h1{
+    font-family: Numans;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 40px;
+    line-height: 100%;
+    letter-spacing: 4%;
+    color: var(--vermelho300)
+}
