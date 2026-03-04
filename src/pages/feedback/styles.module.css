@@ -1,0 +1,89 @@
+.section{
+    padding: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../../assets/backgroundVermelho.png);
+    background-position: 50%;
+
+}
+
+.container{
+    background-color: #74010B; /*Vermelho400*/
+    width: 488px;
+    height: 520px;
+}
+
+.divTexto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.feedback{
+    color: #FCF7F8; /* branco*/
+    font-weight: 400;
+    font-size: 42px;
+}
+
+.texto{
+    color: #FCF7F8; /* branco*/
+    margin-top: 10px;
+    font-weight: 200;
+}
+
+.divInput{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.input1{
+    width: 350px;
+    padding: 5px;
+    margin-top: 25px;
+}
+
+.input2{
+    width: 350px;
+    margin-top: 20px;
+    padding: 5px;
+    padding-top: 8px;
+    padding-bottom: 100px;
+}
+
+.estrelas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.estrelas span{
+    height: 20px;
+    font-size: 50px;
+    -webkit-text-stroke: 2px white;
+}
+
+.estrela{
+    font-size: 400px;
+}
+
+.divBotao{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.botao{
+    background-color: #A31621; /*vermelho 300*/
+    border-radius: 4px;
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 24px;
+    color: #FCF7F8; /*branco*/
+}
