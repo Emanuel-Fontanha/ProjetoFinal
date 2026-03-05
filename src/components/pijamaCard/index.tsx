@@ -1,8 +1,18 @@
 import styles from "./styles.module.css";
 import icone from '../../assets/iconeDisconto.png'
+import { Link } from "react-router-dom";
 
-export default function PijamaCard() {
-  const disconto = true;
+interface pijamaCard{
+  id: number
+  capa?: string
+  nome: string
+  preco: number
+  precoAntigo?: number
+  disconto: boolean
+}
+
+export default function PijamaCard(props : pijamaCard) {
+  const disconto = props.disconto;
 
   return (
     <div className={styles.pijamaCard}>
@@ -33,20 +43,24 @@ export default function PijamaCard() {
           </div>
           {disconto && <img src={icone} className={styles.discountIcon}/>}
         </div>
-        <img /*src={props}*/ className={styles.image} />
+        <Link to={`/pijama/${props.id}`} className={styles.link}>
+          <img src={props.capa} className={styles.image} />
+        </Link>
       </div>
+      <Link to={`/pijama/${props.id}`} className={styles.link}>
       <div className={styles.info}>
-        <p>Pijama feminino Longo - Estampa Poá</p>
+        <p>{props.nome}</p>
         <div className={styles.price}>
           <div>
             <div className={styles.disconto}>
-              {disconto && <span>R$ 78.06</span>}
+              {disconto && <span>{props.precoAntigo}</span>}
             </div>
-            <h1 className={styles.mainPrice}>R$ 67.06</h1>
+            <h1 className={styles.mainPrice}>{props.preco}</h1>
           </div>
-          <h2 className={styles.parcelado}>6x de R$13.15</h2>
+          <h2 className={styles.parcelado}>6x de R${props.preco/6}</h2>
         </div>
       </div>
+      </Link>
     </div>
   );
 }
