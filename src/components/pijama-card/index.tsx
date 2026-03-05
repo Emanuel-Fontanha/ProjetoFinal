@@ -49,7 +49,7 @@ export default function PijamaCard(props : pijamaCard) {
       </div>
       <Link to={`/pijama/${props.id}`} className={styles.link}>
       <div className={styles.info}>
-        <p>{props.nome}</p>
+        <p className={styles.nome}>{props.nome}</p>
         <div className={styles.price}>
           <div>
             <div className={styles.disconto}>
