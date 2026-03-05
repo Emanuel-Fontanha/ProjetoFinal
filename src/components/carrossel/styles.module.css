@@ -1,0 +1,43 @@
+.carrossel{
+    width: auto;
+    height: 28rem;
+    overflow-x: auto;
+    display: flex;
+    overflow-y: hidden;
+}
+.carrossel::-webkit-scrollbar{
+    display: none;
+}
+.grupo{
+    display: flex;
+    animation: spin 9s infinite alternate;
+    object-fit: cover;
+}
+
+.item{
+    flex: 0 0 100vw;
+    width:100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@keyframes spin{
+
+    0% { transform: translateX(0); }
+    30% { transform: translateX(0); }
+
+    40% { transform: translateX(-100vw); }
+
+    70% { transform: translateX(-100vw); }
+
+    82% { transform: translateX(-200vw); }
+
+    100% { transform: translateX(-200vw); }
+}
