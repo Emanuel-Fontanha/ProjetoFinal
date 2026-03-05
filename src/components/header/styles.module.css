@@ -1,53 +1,104 @@
-.header{
+.header {
     width: 100%;
-    height: 178px;
-    background-color: #74010B; /*vermelho400*/
-    display: flex;
-    border-bottom: 1px solid;
-    box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.3);
-}
-
-.img1{
-    margin-left: 70px;
-}
-
-.divLista{
+    height: 20vh;
+    background-color: var(--vermelho400);
+    box-shadow: 0 4px 4px 0px rgba(0, 0, 0, 0.25);
+    font-family: 'Nunito Sans';
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 180px;
+    gap: 200px;
 }
 
-.lista{
+.divContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1
+}
+
+.linkLogo {
+    outline: none;
+    border-radius: 4px;
+    border: 3px solid transparent;
+    transition:
+        transform 0.2s ease-in-out,
+        border 0.2s ease-in-out;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+
+    &:focus-visible {
+        transform: scale(1.1);
+        border: 3px solid var(--vermelho200);
+    }
+}
+
+.linksNav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.pijamaLink {
+    outline: none;
     text-decoration: none;
-    list-style: none;
-    color: #FCF7F8; /*branco*/
-    font-weight: 600;
+    color: var(--branco);
     font-size: 25px;
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    justify-content: center;
+    font-weight: 600;
+    padding: 2px 5px 0px;
+    border: 3px solid transparent;
+    border-radius: 4px;
+    transition:
+        transform 0.2s ease-in-out,
+        border 0.2s ease-in-out;
+
+    &:hover {
+        border-bottom: 3px solid var(--branco);
+    }
+
+    &:focus-visible {
+        border: 3px solid var(--vermelho200);
+    }
 }
 
 .containerIcons{
     display: flex;
-    align-items: center;
     justify-content: center;
-    margin-top: 50px;
-    margin-left: 180px;
+    align-items: center;
+    gap: 40px;
+    flex: 1
 }
 
-.img2{
-    margin-right: 5px;
-}
-
-.divIcons{
+.divIcons {
     display: flex;
-    justify-content: center;
+    gap: 5px;
     align-items: center;
 }
 
-.divUser{
-    margin-left: 20px;
+.iconButton, .iconlink {
+    outline: none;
+    background-color: inherit;
+    border: 3px solid transparent;
+    border-radius: 4px;
+    padding: 0px;
+    transition:
+        transform 0.2s ease-in-out,
+        border 0.2s ease-in-out;
+
+    &:hover {
+        transform: scale(1.3);
+        cursor: pointer;
+    }
+
+    &:focus-visible {
+        transform: scale(1.3);
+        border: 3px solid var(--vermelho200);
+    }
+}
+
+.iconlink {
+    padding: 3px;
 }
