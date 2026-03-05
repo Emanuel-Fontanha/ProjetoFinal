@@ -47,10 +47,10 @@ export default function HomePage() {
         <div className={styles.promocoes}>
           <h1 className={styles.text3}>Nossas últimas promoções!</h1>
           <div className={styles.cards}>
-            <PijamaCard />
-            <PijamaCard />
-            <PijamaCard />
-            <PijamaCard />
+            <PijamaCard id={1} desconto={false} preco={67.50}/>
+            <PijamaCard id={2} desconto={false} preco={67.50}/>
+            <PijamaCard id={3} desconto={false} preco={67.50}/>
+            <PijamaCard id={4} desconto={false} preco={67.50}/>
           </div>
         </div>
         <div className={styles.feedbacks}>

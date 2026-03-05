@@ -5,14 +5,14 @@ import { Link } from "react-router-dom";
 interface pijamaCard{
   id: number
   capa?: string
-  nome: string
+  nome?: string
   preco: number
   precoAntigo?: number
-  disconto: boolean
+  desconto: boolean
 }
 
 export default function PijamaCard(props : pijamaCard) {
-  const disconto = props.disconto;
+  const desconto = props.desconto;
 
   return (
     <div className={styles.pijamaCard}>
@@ -41,7 +41,7 @@ export default function PijamaCard(props : pijamaCard) {
               </svg>
             </label>
           </div>
-          {disconto && <img src={icone} className={styles.discountIcon}/>}
+          {desconto && <img src={icone} className={styles.discountIcon}/>}
         </div>
         <Link to={`/pijama/${props.id}`} className={styles.link}>
           <img src={props.capa} className={styles.image} />
@@ -53,7 +53,7 @@ export default function PijamaCard(props : pijamaCard) {
         <div className={styles.price}>
           <div>
             <div className={styles.disconto}>
-              {disconto && <span>{props.precoAntigo}</span>}
+              {desconto && <span>{props.precoAntigo}</span>}
             </div>
             <h1 className={styles.mainPrice}>{props.preco}</h1>
           </div>
