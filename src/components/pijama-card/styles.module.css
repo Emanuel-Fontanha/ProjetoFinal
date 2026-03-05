@@ -1,3 +1,7 @@
+.link{
+  text-decoration: none;
+}
+
 .pijamaCard {
   width: 25.5rem;
   height: 42.5rem;
@@ -98,4 +102,5 @@
   font-size: 16px;
   line-height: 100%;
   letter-spacing: 0%;
+  color: var(--preto)
 }
