@@ -1,6 +1,22 @@
+import FavoritosCarrossel from "../../components/favoritos-carrossel";
 import styles from "./styles.module.css";
 
 export default function Favoritos() {
+  const card1={
+    id: 1,
+    preco:60,
+    desconto: false
+  }
+  const card2={
+    id: 2,
+    preco:120,
+    desconto: false
+  }
+  const card3={
+    id: 3,
+    preco:240,
+    desconto: false
+  }
   return (
     <div className={styles.favoritosPage}>
       <div className={styles.container}>
@@ -21,6 +37,9 @@ export default function Favoritos() {
             </svg>
           <h1>Favoritos</h1>
         </div>
+      </div>
+      <div className={styles.carrossel}>
+        <FavoritosCarrossel cards={[card1,card2,card3,card2,card2,card2,card2,card2]}/>
       </div>
     </div>
   );
