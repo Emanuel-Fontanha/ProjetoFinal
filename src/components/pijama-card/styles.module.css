@@ -54,8 +54,8 @@
   gap: 1rem;
 }
 
-.info p {
-  font-family: Numans;
+/* .info p {
+  font-family: "Numans";
   font-weight: 400;
   font-style: Regular;
   font-size: 24px;
@@ -63,7 +63,7 @@
   letter-spacing: 5%;
   text-transform: uppercase;
   color: var(--azul300);
-}
+} */
 
 .price {
   display: flex;
@@ -76,7 +76,7 @@
   height: 1.25rem;
   color: var(--vermelho200);
   text-decoration: line-through;
-  font-family: Nunito Sans;
+  font-family: "Nunito Sans";
   font-weight: 400;
   font-style: Regular;
   font-size: 16px;
@@ -86,7 +86,7 @@
 }
 
 .mainPrice {
-  font-family: Nunito Sans;
+  font-family: "Nunito Sans";
   font-weight: 700;
   font-style: Bold;
   font-size: 40px;
@@ -96,7 +96,7 @@
 }
 
 .parcelado {
-  font-family: Nunito Sans;
+  font-family: "Nunito Sans";
   font-weight: 400;
   font-style: Regular;
   font-size: 16px;
