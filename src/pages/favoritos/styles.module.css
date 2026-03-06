@@ -50,5 +50,9 @@
 .carrossel{
     display: flex;
     justify-content: center;
-    padding: 5%
+    padding: 5%;
+    background-image: url('../../assets/vector/vector-azul.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }

@@ -74,6 +74,15 @@
 
 .disconto {
   height: 1.25rem;
+}
+
+.pricebox{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.precoAntigo{
   color: var(--vermelho200);
   text-decoration: line-through;
   font-family: Nunito Sans;

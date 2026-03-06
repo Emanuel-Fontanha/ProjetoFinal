@@ -5,17 +5,23 @@ export default function Favoritos() {
   const card1={
     id: 1,
     preco:60,
-    desconto: false
+    desconto: false,
+    nome: "Pijama feminino longo - estampa poá",
+    precoAntigo: 78.90
   }
   const card2={
     id: 2,
     preco:120,
-    desconto: false
+    desconto: true,
+    nome: "Pijama feminino longo - estampa poá",
+    precoAntigo: 78.90
   }
   const card3={
     id: 3,
     preco:240,
-    desconto: false
+    desconto: false,
+    nome: "Pijama feminino longo - estampa poá",
+    precoAntigo: 78.90
   }
   return (
     <div className={styles.favoritosPage}>

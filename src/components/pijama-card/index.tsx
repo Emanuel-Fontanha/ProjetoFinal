@@ -51,13 +51,13 @@ export default function PijamaCard(props : pijamaCard) {
       <div className={styles.info}>
         <p>{props.nome}</p>
         <div className={styles.price}>
-          <div>
+          <div className={styles.pricebox}>
             <div className={styles.disconto}>
-              {desconto && <span>{props.precoAntigo}</span>}
+              {desconto && <span className={styles.precoAntigo}>{props.precoAntigo}</span>}
             </div>
             <h1 className={styles.mainPrice}>{props.preco}</h1>
           </div>
-          <h2 className={styles.parcelado}>6x de R${props.preco/6}</h2>
+          <h2 className={styles.parcelado}>6x de R${(props.preco/6).toFixed(2)}</h2>
         </div>
       </div>
       </Link>
