@@ -1,0 +1,24 @@
+.carrossel{
+    width: 80vw;
+    display: flex;
+    align-items: center;
+}
+
+.container{
+    display: flex;
+    overflow-x: auto;
+    gap: 3rem;
+    scroll-behavior: smooth;
+}
+
+.container::-webkit-scrollbar{
+    display: none;
+}
+
+.button{
+    border: none;
+    height: 3rem;
+    width: 9rem;
+    background-color: transparent;
+    cursor: pointer;
+}

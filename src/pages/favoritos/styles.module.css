@@ -1,3 +1,7 @@
+.favoritosPage{
+    background-image: url('../../assets/vector/vector-cinza.png');
+}
+
 .container{
     background-color: var(--branco);
     display: flex;
@@ -36,4 +40,14 @@
     line-height: 100%;
     letter-spacing: 4%;
     color: var(--vermelho300)
+}
+
+.carrossel{
+    display: flex;
+    justify-content: center;
+    padding: 5%;
+    background-image: url('../../assets/vector/vector-azul.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
