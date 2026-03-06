@@ -38,7 +38,7 @@ export default function FavoritosCarrossel({ cards } : Iprops){
             <div className={styles.container} ref={carrossel}>
                 {cards.map((element, index) => (
                     <ul key={index}>
-                        <PijamaCard id={element.id} preco={element.preco} desconto={element.desconto} nome={element.nome} precoAntigo={element?.precoAntigo}/>
+                        <PijamaCard id={element.id} preco={element.preco} desconto={element.desconto} nome={element.nome} precoAntigo={element?.precoAntigo} favorito={true}/>
                     </ul>
                 ))}
             </div>

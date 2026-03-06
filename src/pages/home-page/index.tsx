@@ -47,10 +47,10 @@ export default function HomePage() {
             <div className={styles.promocoes}>
             <h1 className={styles.text3}>Nossas últimas promoções!</h1>
                 <div className={styles.cards}>
-                    <PijamaCard id={1} desconto={true} preco={67.06} nome="Pijama feminino longo - estampa poá" precoAntigo={78.90}/>
-                    <PijamaCard id={2} desconto={true} preco={67.06} nome="Pijama feminino longo - estampa poá" precoAntigo={78.90}/>
-                    <PijamaCard id={3} desconto={false} preco={78.90} nome="Pijama feminino longo - estampa poá" />
-                    <PijamaCard id={4} desconto={false} preco={78.90} nome="Pijama feminino longo - estampa poá" />
+                    <PijamaCard id={1} desconto={true} preco={67.06} nome="Pijama feminino longo - estampa poá" precoAntigo={78.90} favorito={false}/>
+                    <PijamaCard id={2} desconto={true} preco={67.06} nome="Pijama feminino longo - estampa poá" precoAntigo={78.90} favorito={true}/>
+                    <PijamaCard id={3} desconto={false} preco={78.90} nome="Pijama feminino longo - estampa poá" favorito={false}/>
+                    <PijamaCard id={4} desconto={false} preco={78.90} nome="Pijama feminino longo - estampa poá" favorito={true}/>
                 </div>
             </div>
             <div className={styles.feedbacks}>
