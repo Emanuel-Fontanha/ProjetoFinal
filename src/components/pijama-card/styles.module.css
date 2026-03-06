@@ -34,13 +34,9 @@
   transition: fill 0.3s ease, transform 0.2s ease;
 }
 
-.check {
-  position: absolute;
-  opacity: 0;
-}
-
-.check:checked + label .coracao {
-  fill: var(--vermelho300);
+.button{
+  background-color: transparent;
+  border: none;
 }
 
 .discountIcon{
