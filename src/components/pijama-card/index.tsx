@@ -10,7 +10,6 @@ interface pijamaCard{
   nome?: string
   preco: number
   precoAntigo?: number
-  favorito: boolean
   desconto: boolean
 }
 
@@ -18,7 +17,11 @@ export default function PijamaCard(props : pijamaCard) {
   const addToFavoritos = useFavoritosStore((state) => state.addToFavoritos)
   const removeFromFavoritos = useFavoritosStore((state) => state.removeFromFavoritos)
 
-  const [favorito, setFavorito] = useState(props.favorito)
+  const favoritado = useFavoritosStore((state) =>
+    state.favoritos.some((item) => item.id === props.id)
+  )
+
+  const [favorito, setFavorito] = useState(favoritado)
 
   const desconto = props.desconto;
 
