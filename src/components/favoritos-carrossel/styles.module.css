@@ -7,6 +7,7 @@
 .container{
     display: flex;
     overflow-x: auto;
+    overflow-y: hidden;
     gap: 3rem;
     scroll-behavior: smooth;
 }
