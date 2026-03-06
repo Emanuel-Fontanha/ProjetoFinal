@@ -1,18 +1,26 @@
 import { useRef } from 'react'
-import PijamaCard from '../pijama-card'
 import styles from './styles.module.css'
-import useFavoritosStore from '../../stores/favoritos-store'
+import FeedbackCard from '../feedback-card'
 
-export default function FavoritosCarrossel(){
-    const cards = useFavoritosStore((state) => state.favoritos)
+interface FeedbackCard{
+    nome: string
+    feedback: string
+    nota: number
+}
+
+interface Iprops{
+    cards: FeedbackCard[]
+}
+
+export default function FeedbackCarrossel({ cards } : Iprops){
     const carrossel=useRef<HTMLDivElement>(null)
 
     const handleRightClick = () =>{
-        if(carrossel.current) carrossel.current.scrollLeft += (456);
+        if(carrossel.current) carrossel.current.scrollLeft += (451);
     }
 
     const handleLeftClick = () =>{
-        if(carrossel.current) carrossel.current.scrollLeft -= (456);
+        if(carrossel.current) carrossel.current.scrollLeft -= (451);
     }
 
     return (
@@ -27,7 +35,7 @@ export default function FavoritosCarrossel(){
             <div className={styles.container} ref={carrossel}>
                 {cards.map((element, index) => (
                     <ul key={index}>
-                        <PijamaCard id={element.id} preco={element.preco} desconto={element.desconto} nome={element.nome} precoAntigo={element?.precoAntigo} favorito={true}/>
+                        <FeedbackCard feedback={element.feedback} nome={element.nome} nota={element.nota}/>
                     </ul>
                 ))}
             </div>

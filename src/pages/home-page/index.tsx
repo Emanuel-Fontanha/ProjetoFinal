@@ -5,6 +5,9 @@ import pijamaicone from "../../assets/pijama-icone.png";
 import contatosicone from "../../assets/people.png";
 import entregaicone from "../../assets/delivery.png";
 import PijamaCard from "../../components/pijama-card";
+import FeedbackCarrossel from "../../components/feedback-carrossel";
+
+const feedback = { nota: 4, nome: "Fulano de Tal", feedback: "Lorem ipsum dolor sit amet. Et voluptatem officia ad sint voluptate qui  voluptas sunt non fugiat labore et consequatur voluptatem sed optio  veniam aut perferendis delectus! Aut Quis impedit a quas animi 33 alias  provident et ipsum deleniti eos pariatur quibusdam."}
 
 export default function HomePage() {
     return (
@@ -47,17 +50,20 @@ export default function HomePage() {
             <div className={styles.promocoes}>
             <h1 className={styles.text3}>Nossas últimas promoções!</h1>
                 <div className={styles.cards}>
-                    <PijamaCard id={1} desconto={true} preco={67.06} nome="Pijama feminino longo - estampa poá" precoAntigo={78.90}/>
-                    <PijamaCard id={2} desconto={true} preco={67.06} nome="Pijama feminino longo - estampa poá" precoAntigo={78.90}/>
-                    <PijamaCard id={3} desconto={false} preco={78.90} nome="Pijama feminino longo - estampa poá" />
-                    <PijamaCard id={4} desconto={false} preco={78.90} nome="Pijama feminino longo - estampa poá" />
+                    <PijamaCard id={1} desconto={true} preco={67.06} nome="Pijama feminino longo - estampa poá" precoAntigo={78.90} favorito={false}/>
+                    <PijamaCard id={2} desconto={true} preco={67.06} nome="Pijama feminino longo - estampa poá" precoAntigo={78.90} favorito={false}/>
+                    <PijamaCard id={3} desconto={false} preco={78.90} nome="Pijama feminino longo - estampa poá" favorito={false}/>
+                    <PijamaCard id={4} desconto={false} preco={78.90} nome="Pijama feminino longo - estampa poá" favorito={false}/>
                 </div>
             </div>
             <div className={styles.feedbacks}>
-            <h1 className={styles.text3}>Feedbacks</h1>
-            <button className={styles.button}>
-                Também quero dar um feedback!
-            </button>
+                <h1 className={styles.text3}>Feedbacks</h1>
+                <div className={styles.feedCarrossel}>
+                    <FeedbackCarrossel cards={[feedback,feedback,feedback,feedback,feedback]} />
+                </div>
+                <button className={styles.button}>
+                    Também quero dar um feedback!
+                </button>
             </div>
         </div>
     );
