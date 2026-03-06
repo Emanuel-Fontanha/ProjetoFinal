@@ -16,7 +16,7 @@ const router = createBrowserRouter([
         children: [
             {
                 index: true,
-                element: <Carrinho/>
+                element: <HomePage/>
             },
             {
                 path: "/favoritos",
@@ -27,8 +27,8 @@ const router = createBrowserRouter([
                 element: <Feedback/>
             },
             {
-                path: "/home",
-                element: <HomePage/>
+                path: "/carrinho",
+                element: <Carrinho/>
             },
             {
                 path: "/login",
