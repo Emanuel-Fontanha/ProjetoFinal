@@ -83,7 +83,7 @@
   text-transform: uppercase;
 }
 
-input {
+/* input {
   width: 390px;
   height: 44px;
   angle: 0 deg;
@@ -103,8 +103,8 @@ h1 {
   line-height: 100%;
   letter-spacing: 4%;
   text-align: right;
-}
-p {
+} */
+/* p {
   width: 390px;
   height: 46px;
   angle: 0 deg;
@@ -119,8 +119,8 @@ p {
   line-height: 100%;
   letter-spacing: 4%;
   text-align: center;
-}
-span {
+} */
+/* span {
   font-family: Roboto Serif;
   font-weight: bold;
   font-style: Italic;
@@ -129,7 +129,7 @@ span {
   line-height: 100%;
   letter-spacing: 4%;
   text-align: center;
-}
+} */
 
 .dentroForm {
   display: flex;
