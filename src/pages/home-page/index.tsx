@@ -45,21 +45,6 @@ export default function HomePage() {
                 </div>
             </div>
             <div className={styles.promocoes}>
-                <h1 className={styles.text3}>Nossas últimas promoções!</h1>
-                <div className={styles.cards}>
-                    <PijamaCard id={1} desconto={false} preco={67.50} />
-                    <PijamaCard id={2} desconto={false} preco={67.50} />
-                    <PijamaCard id={3} desconto={false} preco={67.50} />
-                    <PijamaCard id={4} desconto={false} preco={67.50} />
-                </div>
-            </div>
-            <div className={styles.feedbacks}>
-                <h1 className={styles.text3}>Feedbacks</h1>
-                <button className={styles.button}>
-                    Também quero dar um feedback!
-                </button>
-            </div>
-            <div className={styles.promocoes}>
             <h1 className={styles.text3}>Nossas últimas promoções!</h1>
                 <div className={styles.cards}>
                     <PijamaCard id={1} desconto={true} preco={67.06} nome="Pijama feminino longo - estampa poá" precoAntigo={78.90}/>
