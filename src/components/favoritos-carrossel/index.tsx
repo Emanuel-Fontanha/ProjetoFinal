@@ -1,21 +1,10 @@
 import { useRef } from 'react'
 import PijamaCard from '../pijama-card'
 import styles from './styles.module.css'
+import useFavoritosStore from '../../stores/favoritos-store'
 
-interface PijamaCard{
-  id: number
-  capa?: string
-  nome?: string
-  preco: number
-  precoAntigo?: number
-  desconto: boolean
-}
-
-interface Iprops{
-    cards: PijamaCard[]
-}
-
-export default function FavoritosCarrossel({ cards } : Iprops){
+export default function FavoritosCarrossel(){
+    const cards = useFavoritosStore((state) => state.favoritos)
     const carrossel=useRef<HTMLDivElement>(null)
 
     const handleRightClick = () =>{
@@ -38,7 +27,7 @@ export default function FavoritosCarrossel({ cards } : Iprops){
             <div className={styles.container} ref={carrossel}>
                 {cards.map((element, index) => (
                     <ul key={index}>
-                        <PijamaCard id={element.id} preco={element.preco} desconto={element.desconto} nome={element.nome} precoAntigo={element?.precoAntigo}/>
+                        <PijamaCard id={element.id} preco={element.preco} desconto={element.desconto} nome={element.nome} precoAntigo={element?.precoAntigo} favorito={true}/>
                     </ul>
                 ))}
             </div>
