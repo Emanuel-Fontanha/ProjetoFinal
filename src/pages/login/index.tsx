@@ -41,10 +41,10 @@ export default function Login() {
   return (
     <div className={style.loginContainer}>
       <div className={style.loginRetangulo}>
-        <h1>Login</h1>
-        <p>
+        <h1 className={style.titulodoForm}>Login</h1>
+        <p className={style.mensagemloginForm}>
           Faça login para ter acesso aos pijamas dos seus{" "}
-          <span>sonhos!</span>{" "}
+          <span className={style.spanTexto}>sonhos!</span>{" "}
         </p>
 
         <form
@@ -53,6 +53,7 @@ export default function Login() {
           onSubmit={handleSubmit(createUser)}
         >
           <input
+            className={style.inputnosForms}
             type="text"
             placeholder=" Usuário ou E-mail"
             {...register("usuarioEmail")}
@@ -68,6 +69,7 @@ export default function Login() {
               type="password"
               placeholder=" Senha"
               {...register("password")}
+              className={style.inputnosForms}
             />
             {errors.password && (
               <span className={style.spanInput}>{errors.password.message}</span>

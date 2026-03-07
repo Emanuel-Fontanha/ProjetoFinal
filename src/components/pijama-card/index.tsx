@@ -3,7 +3,7 @@ import icone from '../../assets/iconeDisconto.png'
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import useFavoritosStore from "../../stores/favoritos-store";
-import type Pijama from "../../types/types";
+import type {Pijama} from "../../types/types";
 
 export default function PijamaCard(props : Pijama) {
   const addToFavoritos = useFavoritosStore((state) => state.addToFavoritos)
