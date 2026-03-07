@@ -7,10 +7,27 @@ import entregaicone from "../../assets/delivery.png";
 import PijamaCard from "../../components/pijama-card";
 import FeedbackCarrossel from "../../components/feedback-carrossel";
 import { Link } from "react-router-dom";
+import { pijamaService } from "../../services/pijamas-service";
+import type { Pijama } from "../../types/types";
+import { useEffect, useState } from "react";
 
 const feedback = { nota: 4, nome: "Fulano de Tal", feedback: "Lorem ipsum dolor sit amet. Et voluptatem officia ad sint voluptate qui  voluptas sunt non fugiat labore et consequatur voluptatem sed optio  veniam aut perferendis delectus! Aut Quis impedit a quas animi 33 alias  provident et ipsum deleniti eos pariatur quibusdam."}
 
 export default function HomePage() {
+    const [pijamas, setPijamas] = useState<Pijama[]>([])
+    
+    useEffect(() => {
+        const loadPijamas = async () =>{
+            try{
+                const data: Pijama[] = await pijamaService.getPijamas({page: 1, perPage: 4})
+                setPijamas(data)
+            }catch(error){
+                console.error('Algo deu errado:', error)
+            }
+        } 
+        loadPijamas()
+    }, [])
+
     return (
         <div className={styles.homePage}>
             <div className={styles.apresentacao}>
@@ -51,10 +68,13 @@ export default function HomePage() {
             <div className={styles.promocoes}>
             <h1 className={styles.text3}>Nossas últimas promoções!</h1>
                 <div className={styles.cards}>
+                    {pijamas.map((element, index) => (
+                        <PijamaCard id={element.id} capa={element.capa} desconto={true} key={index} preco={element.preco} nome={element.nome} precoAntigo={element.precoAntigo}/>
+                    ))}
                     <PijamaCard id={1} desconto={true} preco={67.06} nome="Pijama feminino longo - estampa poá" precoAntigo={78.90}/>
                     <PijamaCard id={2} desconto={true} preco={67.06} nome="Pijama feminino longo - estampa poá" precoAntigo={78.90}/>
-                    <PijamaCard id={3} desconto={false} preco={78.90} nome="Pijama feminino longo - estampa poá"/>
-                    <PijamaCard id={4} desconto={false} preco={78.90} nome="Pijama feminino longo - estampa poá"/>
+                    <PijamaCard id={3} desconto={true} preco={67.06} nome="Pijama feminino longo - estampa poá" precoAntigo={78.90}/>
+                    <PijamaCard id={4} desconto={true} preco={67.06} nome="Pijama feminino longo - estampa poá" precoAntigo={78.90}/>
                 </div>
             </div>
             <div className={styles.feedbacks}>
