@@ -3,17 +3,9 @@ import icone from '../../assets/iconeDisconto.png'
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import useFavoritosStore from "../../stores/favoritos-store";
+import type Pijama from "../../types/types";
 
-interface pijamaCard{
-  id: number
-  capa?: string
-  nome?: string
-  preco: number
-  precoAntigo?: number
-  desconto: boolean
-}
-
-export default function PijamaCard(props : pijamaCard) {
+export default function PijamaCard(props : Pijama) {
   const addToFavoritos = useFavoritosStore((state) => state.addToFavoritos)
   const removeFromFavoritos = useFavoritosStore((state) => state.removeFromFavoritos)
 
@@ -25,7 +17,7 @@ export default function PijamaCard(props : pijamaCard) {
 
   const desconto = props.desconto;
 
-  function handleFavorite(id: number, item: pijamaCard) {
+  function handleFavorite(id: number, item: Pijama) {
     if(!favorito){
       addToFavoritos(item)
     }else{
